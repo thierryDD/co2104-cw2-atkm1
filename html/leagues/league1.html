@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CO2104 CW2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../css/leagues.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        th{
+            color: #fff;
+        }
+    </style>
+    
+    <div class="title">
+      <h1>London's Football</h1>
+      <a href="../login/login.html" class="loginButton">Login</a>
+    </div>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../home.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Leagues
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <li><a class="dropdown-item" href="premier.html">Premier League</a></li>
+                  <li><a class="dropdown-item" href="championship.html">Championship</a></li>
+                  <li><a class="dropdown-item" href="league1.html">League 1</a></li>
+                  <li><a class="dropdown-item" href="league2.html">League 2</a></li>
+                  <li><a class="dropdown-item" href="nation.html">Nation League</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Cups
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                  <li><a class="dropdown-item" href="../cups/fa.html">FA</a></li>
+                  <li><a class="dropdown-item" href="../cups/efl.html">EFL</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Euro Cups
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                  <li><a class="dropdown-item" href="../euroCups/champions.html">Champions L.</a></li>
+                  <li><a class="dropdown-item" href="../euroCups/europa.html">Europa L.</a></li>
+                  <li><a class="dropdown-item" href="../euroCups/conference.html">Conference L.</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  International
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                  <li><a class="dropdown-item" href="../international/wc.html">World Cup</a></li>
+                  <li><a class="dropdown-item" href="../international/euro.html">Euro Cup</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../map.html">Map</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="../club.html" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Club
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                  <div class="px-4 py-3">
+                    <input class="form-control" type="text" id="searchInput" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="navigationToFile()">Search</button>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Bootstrap 5 JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <main>
+  
+  
+        <div class="content">
+          <div class="content-info">
+            <div class="intro">
+              <p>The <b>"EFL League 1"</b> is the third division of football in England.
+              </p>
+            </div>
+  
+            <div class="listTitle">
+              <p><u>Information:</u></p>
+            </div>
+  
+            <p><b>Founded -</b> 2004<br>
+            <b>Number of teams -</b> 24 <br>
+            <b><span style="color: green;">Promotion</span> -</b> EFL Championship League<br>
+            <b><span style="color: red;">Relegation</span> -</b> EFL League 2 <br>
+            <b>Current champions -</b> Portsmouth <br>
+            <b>Most championships -</b> Wingan Athletic </p>
+          
+  
+          </div>
+        </div>
+  
+        <table class="table table-striped">
+            <tr class="bg-info">
+                <th>Date</th>
+                <th>Teams</th>
+                <th>Location</th>
+                <th>Tickets</th>
+            </tr>
+  
+            <tbody id="myTable">
+  
+            </tbody>
+        </table>
+  
+  
+        <footer class="footer">
+          <div class="foot-container">
+            <div class="foot-row">
+              <div class="foot-col">
+                <h4>London's Football</h4>
+              </div>
+              <div class="foot-col">
+                <h4>About us</h4>
+                <ul>
+                  <li><button onclick="OpenSlide('contactPopup')">Contact</button></li>
+                  <div class="popup" id="contactPopup">
+                    <i class='bx bxs-contact'></i>
+                    <h2>Contact</h2>
+                    <p>To reach, here is our email:</p>
+                    <h3>londonsFootball@gmail.com</h3>
+                    <button onclick="CloseSlide('contactPopup')">OK</button>
+                  </div>
+                </ul>
+              </div>
+              <div class="foot-col">
+                <h4>Get Help</h4>
+                <ul>
+                  <li><button onclick="OpenSlide('helpPopup')">FAQ</button></li>
+                  <div class="popup" id="helpPopup">
+                    <i class='bx bxs-help-circle'></i>
+                    <h2>Help</h2>
+                    <p>If you have any problems with the website, here is the IT email:</p>
+                    <h3>ldIT@gmail.com</h3>
+                    <button onclick="CloseSlide('helpPopup')">OK</button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+  
+  
+        <script src="../../js/leagues/league1.js"></script>
+  
+  
+    </main>
+  
+  
+  </body>
+  </html>
